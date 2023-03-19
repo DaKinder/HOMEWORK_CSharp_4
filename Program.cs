@@ -41,8 +41,7 @@ int CountNumbers(int num)
     return sum;
 }
 
-int num = UserEnter();
-int result = CountNumbers(num);
+int result = CountNumbers(UserEnter());
 System.Console.WriteLine($"Результат равен {result}");
 
 

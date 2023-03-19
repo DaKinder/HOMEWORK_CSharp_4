@@ -24,4 +24,26 @@ System.Console.WriteLine($"Ответ: {MathPowInt(numbers)}");
 
 //Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
+int UserEnter()
+{
+    Console.Write("введите целое число: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+    return num;
+}
+
+int CountNumbers(int num)
+{
+    int sum = 0;
+    for(int tempNum = num; tempNum > 0; tempNum = tempNum / 10)
+    {
+        sum += tempNum % 10;
+    }
+    return sum;
+}
+
+int num = UserEnter();
+int result = CountNumbers(num);
+System.Console.WriteLine($"Результат равен {result}");
+
+
 //Задача 29: Напишите программу, которая задаёт массив из N элементов и выводит их на экран.

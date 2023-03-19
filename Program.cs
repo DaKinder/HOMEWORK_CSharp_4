@@ -32,15 +32,14 @@ int UserEnter()
 {
     Console.Write("введите целое число: ");
     return Convert.ToInt32(Console.ReadLine());
-
 }
 
 int CountNumbers(int num)
 {
     int sum = 0;
-    for (int tempNum = num; tempNum > 0; tempNum = tempNum / 10)
+    for (; num > 0; num = num / 10)
     {
-        sum += tempNum % 10;
+        sum += num % 10;
     }
     return sum;
 }
